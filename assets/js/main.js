@@ -1,3 +1,4 @@
+// fase 3
 
 class ValidaFormulario {
     constructor() {
@@ -18,6 +19,10 @@ class ValidaFormulario {
 
     camposSaoValidos() {
         let valid = true;
+
+        for(let errorText of this.formulario.querySelectorAll('.error-text')) {
+            errorText.remove();
+        }
 
         for(let campo of this.formulario.querySelectorAll('.validar')) {
             const label = campo.previousElementSibling.innerText;
